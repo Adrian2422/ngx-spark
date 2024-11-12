@@ -1,14 +1,18 @@
 {
-  "name": "ngx-akui",
+  "name": "ngx-sparkui",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "compodoc:build": "compodoc -p tsconfig.doc.json -n 'SPARKUI docs'",
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s -n 'SPARKUI docs'",
+    "compodoc:serve": "compodoc -s -n 'SPARKUI docs'",
+    "storybook": "ng run ngx-sparkui:storybook",
+    "build-storybook": "ng run ngx-sparkui:build-storybook"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",
     "@angular/common": "^18.2.0",
@@ -19,19 +23,36 @@
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
     "rxjs": "~7.8.0",
+    "tailwind-merge": "^2.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.11",
     "@angular/cli": "^18.2.8",
     "@angular/compiler-cli": "^18.2.0",
+    "@chromatic-com/storybook": "^3.2.2",
+    "@compodoc/compodoc": "^1.1.26",
+    "@storybook/addon-docs": "^8.4.2",
+    "@storybook/addon-essentials": "^8.4.2",
+    "@storybook/addon-interactions": "^8.4.2",
+    "@storybook/addon-onboarding": "^8.4.2",
+    "@storybook/angular": "^8.4.2",
+    "@storybook/blocks": "^8.4.2",
+    "@storybook/test": "^8.4.2",
     "@types/jasmine": "~5.1.0",
+    "autoprefixer": "^10.4.20",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-packagr": "^18.2.0",
+    "postcss": "^8.4.49",
+    "sass": "^1.80.6",
+    "storybook": "^8.4.2",
+    "tailwindcss": "^3.4.14",
     "typescript": "~5.5.2"
   }
 }
