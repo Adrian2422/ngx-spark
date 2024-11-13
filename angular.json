@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-sparkui": {
+    "ngx-spark-ui": {
       "projectType": "library",
-      "root": "projects/ngx-sparkui",
-      "sourceRoot": "projects/ngx-sparkui/src",
+      "root": "projects/ngx-spark-ui",
+      "sourceRoot": "projects/ngx-spark-ui/src",
       "prefix": "a",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngx-sparkui/ng-package.json"
+            "project": "projects/ngx-spark-ui/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-sparkui/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-spark-ui/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngx-sparkui/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-spark-ui/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/ngx-sparkui/tsconfig.spec.json",
+            "tsConfig": "projects/ngx-spark-ui/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -37,17 +37,17 @@
         "storybook": {
           "builder": "@storybook/angular:start-storybook",
           "options": {
-            "configDir": "projects/ngx-sparkui/.storybook",
+            "configDir": "projects/ngx-spark-ui/.storybook",
             "styles": [
-              "projects/ngx-sparkui/.storybook/tailwind.css"
+              "projects/ngx-spark-ui/.storybook/tailwind.css"
             ],
-            "browserTarget": "ngx-sparkui:build",
+            "browserTarget": "ngx-spark-ui:build",
             "compodoc": true,
             "compodocArgs": [
               "-e",
               "json",
               "-d",
-              "projects/ngx-sparkui"
+              "projects/ngx-spark-ui"
             ],
             "port": 6006
           }
@@ -55,22 +55,77 @@
         "build-storybook": {
           "builder": "@storybook/angular:build-storybook",
           "options": {
-            "configDir": "projects/ngx-sparkui/.storybook",
+            "configDir": "projects/ngx-spark-ui/.storybook",
             "styles": [
-              "projects/ngx-sparkui/.storybook/tailwind.css"
+              "projects/ngx-spark-ui/.storybook/tailwind.css"
             ],
-            "browserTarget": "ngx-sparkui:build",
+            "browserTarget": "ngx-spark-ui:build",
             "compodoc": true,
             "compodocArgs": [
               "-e",
               "json",
               "-d",
-              "projects/ngx-sparkui"
+              "projects/ngx-spark-ui"
             ],
             "outputDir": "storybook-static"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-spark-ui/**/*.ts",
+              "projects/ngx-spark-ui/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-spark-icons": {
+      "projectType": "library",
+      "root": "projects/ngx-spark-icons",
+      "sourceRoot": "projects/ngx-spark-icons/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-spark-icons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-spark-icons/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-spark-icons/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ngx-spark-icons/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-spark-icons/**/*.ts",
+              "projects/ngx-spark-icons/**/*.html"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false,
+    "schematicCollections": ["@angular-eslint/schematics", "@ngrx/schematics"]
   }
 }

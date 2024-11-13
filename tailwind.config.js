@@ -4,7 +4,7 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   darkMode: ['class', '[data-mode="dark"]'],
   content: [
-    "./projects/ngx-sparkui/**/*.{html,ts,scss}",
+    "./projects/ngx-spark-ui/**/*.{html,ts,scss}",
   ],
   theme: {
     container: {

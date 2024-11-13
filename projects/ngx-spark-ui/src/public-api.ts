@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngx-sparkui
+ * Public API Surface of ngx-spark-ui
  */
 
 //region Components

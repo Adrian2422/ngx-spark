@@ -12,8 +12,11 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "paths": {
-      "ngx-sparkui": [
-        "./dist/ngx-sparkui"
+      "ngx-spark-icons": [
+        "./dist/ngx-spark-icons"
+      ],
+      "ngx-spark-ui": [
+        "./dist/ngx-spark-ui"
       ]
     },
     "esModuleInterop": true,
