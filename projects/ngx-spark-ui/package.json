@@ -1,5 +1,10 @@
 {
   "name": "ngx-spark-ui",
+  "author": {
+    "name": "Adrian Kloc",
+    "email": "adrian.kloc47@gmail.com"
+  },
+  "keywords": ["ui", "ux", "component", "angular"],
   "version": "0.0.4",
   "peerDependencies": {
     "@angular/common": "^18.2.0",
